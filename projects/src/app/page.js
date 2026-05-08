@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image'
 
 import {
   motion,
@@ -43,8 +44,8 @@ function InteractiveBackground() {
         style={{ x: moveX, y: moveY }}
         className="absolute inset-[-20px]"
       >
-        <img
-          src="/20250905_DemoDayPhotos-24.JPEG"
+        <Image
+          src="../img/profilepic.JPEG"
           alt="Calisthenics Park"
           className="h-full w-full object-cover opacity-30"
         />
@@ -161,7 +162,7 @@ export default function Home() {
             onMouseLeave={() => setHovered(false)}
           >
             <img
-              src="/me.jpg"
+              src="/profilepic.JPEG"
               alt="Profile"
               className="w-full h-full object-cover"
             />
