@@ -115,7 +115,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-6xl md:text-8xl font-black tracking-tight leading-none uppercase italic"
             >
-              Your Full Name
+              Richard Williams
             </motion.h1>
 
             <motion.p
