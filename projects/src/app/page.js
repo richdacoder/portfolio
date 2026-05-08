@@ -44,7 +44,7 @@ function InteractiveBackground() {
         className="absolute inset-[-20px]"
       >
         <img
-          src="/park.jpg"
+          src="/20250905_DemoDayPhotos-24.JPEG"
           alt="Calisthenics Park"
           className="h-full w-full object-cover opacity-30"
         />
