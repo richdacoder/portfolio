@@ -71,7 +71,7 @@ function ProjectCard({ title, description, tech }) {
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
       whileHover={{ scale: 1.02 }}
-      className="group border border-neutral-800 hover:border-neutral-600 rounded-3xl p-8 transition-all duration-500 backdrop-blur-sm bg-white/[0.02]"
+      className="moving group relative border border-neutral-800 hover:border-neutral-600 rounded-3xl p-8 transition-all duration-500 backdrop-blur-sm bg-white/[0.02]"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
@@ -155,7 +155,8 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <motion.div
+
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -164,13 +165,13 @@ export default function Home() {
             }`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-          >
-            <img
-              src="/profilepic.JPEG"
+          > */}
+            <Image
+              // src="/profilepic.JPEG"
               alt="Profile"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+              className="w-full h-full object-cover"            />
+          {/* </motion.div> */}
+
         </motion.header>
 
         <section className="border-t border-neutral-800 pt-20">
