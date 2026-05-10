@@ -166,10 +166,11 @@ export default function Home() {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           > */}
-            <Image
-              // src="/profilepic.JPEG"
+            {/* <Image
+              src="img/profilepic.JPEG"
               alt="Profile"
-              className="w-full h-full object-cover"            />
+              className="w-full h-full object-cover"
+              /> */}
           {/* </motion.div> */}
 
         </motion.header>
