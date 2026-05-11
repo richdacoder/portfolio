@@ -36,27 +36,27 @@ function InteractiveBackground() {
   }
 
   return (
-<div
-  onMouseMove={handleMouseMove}
-  className="absolute inset-0 overflow-hidden"
->
-  <motion.div
-    style={{ x: moveX, y: moveY }}
-    className="absolute inset-[-20px]" // Extra space for movement
-  >
-    <Image
-      src="/profilepic.JPEG"
-      alt="Calisthenics Park"
-      fill                        // 1. Tells Next.js to fill the motion.div
-      priority                    // 2. High priority for backgrounds
-      className="object-cover opacity-30" // 3. Replaces h-full/w-full
-      sizes="100vw"               // 4. Critical for optimization
-    />
-  </motion.div>
+    <div
+      onMouseMove={handleMouseMove}
+      className="absolute inset-0 overflow-hidden"
+    >
+      <motion.div
+        style={{ x: moveX, y: moveY }}
+        className="absolute inset-[-20px]" // Extra space for movement
+      >
+        <Image
+          src="/profilepic.JPEG"
+          alt="Calisthenics Park"
+          fill                        // 1. Tells Next.js to fill the motion.div
+          priority                    // 2. High priority for backgrounds
+          className="object-cover opacity-30" // 3. Replaces h-full/w-full
+          sizes="100vw"               // 4. Critical for optimization
+        />
+      </motion.div>
 
-  {/* Overlay to dim the background */}
-  <div className="absolute inset-0 bg-black/60 pointer-events-none" />
-</div>
+      {/* Overlay to dim the background */}
+      <div className="absolute inset-0 bg-black/60 pointer-events-none" />
+    </div>
   );
 }
 
@@ -155,8 +155,8 @@ export default function Home() {
             </motion.div>
           </div>
 
-
-          {/* <motion.div
+          {/* RESTORED PROFILE CONTAINER */}
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -165,13 +165,16 @@ export default function Home() {
             }`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-          > */}
-            {/* <Image
-              src="img/profilepic.JPEG"
+          >
+            <Image
+              src="/profilepic.JPEG" // Prefixed with slash to pull from public folder
               alt="Profile"
-              className="w-full h-full object-cover"
-              /> */}
-          {/* </motion.div> */}
+              fill
+              priority
+              sizes="(max-w-768px) 256px, 320px"
+              className="object-cover"
+            />
+          </motion.div>
 
         </motion.header>
 
