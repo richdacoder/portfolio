@@ -40,19 +40,6 @@ function InteractiveBackground() {
       onMouseMove={handleMouseMove}
       className="absolute inset-0 overflow-hidden"
     >
-      <motion.div
-        style={{ x: moveX, y: moveY }}
-        className="absolute inset-[-20px]" // Extra space for movement
-      >
-        <Image
-          src="/profilepic.JPEG"
-          alt="Calisthenics Park"
-          fill                        // 1. Tells Next.js to fill the motion.div
-          priority                    // 2. High priority for backgrounds
-          className="object-cover opacity-30" // 3. Replaces h-full/w-full
-          sizes="100vw"               // 4. Critical for optimization
-        />
-      </motion.div>
 
       {/* Overlay to dim the background */}
       <div className="absolute inset-0 bg-black/60 pointer-events-none" />
