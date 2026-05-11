@@ -167,7 +167,7 @@ export default function Home() {
             onMouseLeave={() => setHovered(false)}
           >
             <Image
-              src="/profilepic.JPEG" // Prefixed with slash to pull from public folder
+              src="/img/profilepic.JPEG" // Prefixed with slash to pull from public folder
               alt="Profile"
               fill
               priority
