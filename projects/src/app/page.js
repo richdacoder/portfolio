@@ -226,7 +226,7 @@ export default function Home() {
           </h2>
 
           <p className="mt-6 text-neutral-400 text-lg">
-            yourname@email.com
+           Richard.williams5697@yahoo.com
           </p>
         </section>
       </div>
