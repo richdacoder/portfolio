@@ -226,7 +226,10 @@ export default function Home() {
           </h2>
 
           <p className="mt-6 text-neutral-400 text-lg">
-           Richard.williams5697@yahoo.com
+           Personal: Richard.williams5697@yahoo.com
+          </p>
+          <p className="mt-6 text-neutral-400 text-lg">
+          Business: Shalimi.tech203@gmail.com
           </p>
         </section>
       </div>
