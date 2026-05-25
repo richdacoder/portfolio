@@ -173,7 +173,7 @@ export default function Home() {
               </p>
 
               <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-                Clean code. Strong design. Disciplined execution.
+              Building scalable digital solutions that improve operations and customer convenience.
               </h2>
             </div>
 
