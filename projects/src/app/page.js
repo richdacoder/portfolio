@@ -178,9 +178,13 @@ export default function Home() {
             </div>
 
             <p className="text-neutral-400 text-lg leading-relaxed">
-              I develop modern web applications using Next.js, React, and
-              scalable frontend architecture. My approach combines strong UI
-              design principles with performance-focused engineering.
+            I’m a freelance web developer who designs and develops custom web solutions for local
+            businesses, building professional and scalable web platforms tailored to their needs
+            while improving customer experience and strengthening their online presence. I develop
+            modern web applications using Next.js, React, and scalable full-stack architecture. My
+            approach combines strong UI design principles with performance-focused engineering while
+            helping businesses create more organized digital workflows and improve customer convenience.
+
             </p>
           </div>
         </section>
