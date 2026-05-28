@@ -216,15 +216,6 @@ export default function Home() {
                 sizes="(max-width: 768px) 256px, 320px"
                 className="rounded-2xl border transition-transform duration-300 group-hover:scale-[1.02]"
               />
-              <a
-                href="https://github.com/richdacoder/Big-jumps-4-tods"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-neutral-400 hover:text-white transition"
-              >
-    GitHub →
-  </a>
-
     <div className="mt-4 space-y-2">
       <h3 className="text-2xl font-bold">
         Big Jumps 4 TODs
@@ -243,6 +234,16 @@ export default function Home() {
       </p>
     </div>
   </a>
+
+  <a
+                href="https://github.com/richdacoder/Big-jumps-4-tods"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-neutral-400 hover:text-white transition"
+              >
+    GitHub →
+  </a>
+
 </div>        </section>
 
         <section
