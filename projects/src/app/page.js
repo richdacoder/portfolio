@@ -201,19 +201,49 @@ export default function Home() {
               </h2>
             </div>
           </div>
-
-          <div className="space-y-8">
-            <a href="https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwjyhZak3dSUAxWBl4kEHTGLC58QPQgI">
+          <div className="space-y-4 max-w-sm">
+            <a
+              href="https://big-jumps-4-tods.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
+            >
               <Image
-              src="/img/bigjumps4tods.png"
-              alt="bigjump4tods-card"
-              width={320}
-              height={240}
-              sizes="(max-width: 768px) 256px, 320px"
-  />
-            </a>
-           </div>
-        </section>
+                src="/img/bigjumps4tods.png"
+                alt="Big Jumps 4 TODs project preview"
+                width={320}
+                height={240}
+                sizes="(max-width: 768px) 256px, 320px"
+                className="rounded-2xl border transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <a
+                href="https://github.com/richdacoder/Big-jumps-4-tods"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-neutral-400 hover:text-white transition"
+              >
+    GitHub →
+  </a>
+
+    <div className="mt-4 space-y-2">
+      <h3 className="text-2xl font-bold">
+        Big Jumps 4 TODs
+      </h3>
+
+      <p className="text-sm text-gray-400 leading-relaxed">
+        A full-stack booking platform built for a local soft play
+        and baby gym rental business. Customers can browse rentals,
+        submit booking requests, and view real-time availability,
+        while admins can efficiently manage schedules and prevent
+        double bookings.
+      </p>
+
+      <p className="text-xs text-gray-500">
+        Next.js · React · Express.js · PostgreSQL · Tailwind CSS
+      </p>
+    </div>
+  </a>
+</div>        </section>
 
         <section
           id="contact"
