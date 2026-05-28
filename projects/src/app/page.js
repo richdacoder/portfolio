@@ -203,18 +203,16 @@ export default function Home() {
           </div>
 
           <div className="space-y-8">
-            <ProjectCard
-              title="Portfolio Platform"
-              description="A modern developer portfolio built with Next.js, Tailwind, and interactive motion effects."
-              tech="Next.js · Tailwind · Framer Motion"
-            />
-
-            <ProjectCard
-              title="Client Management Dashboard"
-              description="Full-stack dashboard with authentication, API integration, and modern responsive UI."
-              tech="React · APIs · Node.js"
-            />
-          </div>
+            <a href="https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwjyhZak3dSUAxWBl4kEHTGLC58QPQgI">
+              <Image
+              src="/img/bigjumps4tods.png"
+              alt="bigjump4tods-card"
+              width={320}
+              height={240}
+              sizes="(max-width: 768px) 256px, 320px"
+  />
+            </a>
+           </div>
         </section>
 
         <section
