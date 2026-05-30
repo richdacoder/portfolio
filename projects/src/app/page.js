@@ -246,6 +246,54 @@ export default function Home() {
 
 </div>        </section>
 
+<div className="space-y-4 max-w-sm">
+  <div className="group">
+    <a
+      href="https://github.com/richdacoder/Russ-D-wings-"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src="/img/russ-d-wings.jpeg"
+        alt="Russ D Wings project preview"
+        width={320}
+        height={240}
+        sizes="(max-width: 768px) 256px, 320px"
+        className="rounded-2xl border border-neutral-800 transition-transform duration-300 group-hover:scale-[1.02]"
+      />
+    </a>
+
+    <div className="mt-4 space-y-2">
+      <h3 className="text-2xl font-bold">
+        Russ D Wings
+      </h3>
+
+      <p className="text-sm text-gray-400 leading-relaxed">
+        A full-stack scheduling and order management platform built for a
+        New Haven chicken wing business. Features conflict-free scheduling,
+        admin-controlled order workflows, automated email notifications,
+        and a scalable architecture designed to improve operational
+        efficiency and customer communication.
+      </p>
+
+      <p className="text-xs text-gray-500">
+        Next.js · React · Express.js · PostgreSQL · Knex · Resend · Docker
+      </p>
+
+      <div className="flex gap-4 pt-2">
+        <a
+          href="https://github.com/richdacoder/Russ-D-wings-"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-medium text-neutral-400 hover:text-white transition"
+        >
+          GitHub →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
         <section
           id="contact"
           className="mt-32 border-t border-neutral-800 pt-20 pb-10"
