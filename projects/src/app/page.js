@@ -126,20 +126,30 @@ export default function Home() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-10 flex flex-wrap gap-4"
             >
-              <a
-                href="#projects"
-                className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition-transform duration-300"
-              >
-                View Projects
-              </a>
+              <div className="mt-10 flex flex-wrap gap-4">
+  <a
+    href="#projects"
+    className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition-transform duration-300"
+  >
+    View Projects
+  </a>
 
-              <a
-                href="#contact"
-                className="px-6 py-3 border border-neutral-700 rounded-full hover:border-white transition"
-              >
-                Contact
-              </a>
-            </motion.div>
+  <a
+    href="#contact"
+    className="px-6 py-3 border border-neutral-700 rounded-full hover:border-white transition"
+  >
+    Contact
+  </a>
+
+  <a
+    href="https://github.com/richdacoder"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 border border-neutral-700 rounded-full hover:border-white transition"
+  >
+    GitHub
+  </a>
+</div>            </motion.div>
           </div>
 
           {/* RESTORED PROFILE CONTAINER */}
