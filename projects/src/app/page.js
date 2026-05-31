@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image';
-import { Github } from "lucide-react";
-
+import { FaGithub } from "react-icons/fa";
 import {
   motion,
   useMotionValue,
@@ -191,8 +190,9 @@ export default function Home() {
     shadow-[0_8px_20px_rgba(213,43,30,0.45)]
   "
 >
-<Github size={20} />  GitHub
-</a></div>
+<FaGithub size={20} />  GitHub
+</a>
+</div>
 </div>            </motion.div>
           </div>
 
