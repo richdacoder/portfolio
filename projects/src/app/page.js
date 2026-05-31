@@ -142,16 +142,35 @@ export default function Home() {
               className="mt-10 flex flex-wrap gap-4"
             >
               <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-10 flex flex-wrap gap-4">
   <a
     href="#projects"
-    className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition-transform duration-300"
+    className="
+      px-6 py-3 rounded-full font-bold text-black
+      bg-[#FFD100]
+      hover:scale-105
+      transition-all duration-300
+      shadow-[0_8px_20px_rgba(255,209,0,0.45)]
+      hover:shadow-[0_12px_30px_rgba(255,209,0,0.7)]
+      border border-[#FFE45E]
+      relative
+    "
   >
     View Projects
   </a>
 
   <a
     href="#contact"
-    className="px-6 py-3 border border-neutral-700 rounded-full hover:border-white transition"
+    className="
+      px-6 py-3 rounded-full font-bold text-white
+      bg-[#0033A0]
+      hover:scale-105
+      transition-all duration-300
+      shadow-[0_8px_20px_rgba(0,51,160,0.45)]
+      hover:shadow-[0_12px_30px_rgba(0,51,160,0.7)]
+      border border-[#4F7DFF]
+      relative
+    "
   >
     Contact
   </a>
@@ -160,10 +179,20 @@ export default function Home() {
     href="https://github.com/richdacoder"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-6 py-3 border border-neutral-700 rounded-full hover:border-white transition"
+    className="
+      px-6 py-3 rounded-full font-bold text-white
+      bg-[#D52B1E]
+      hover:scale-105
+      transition-all duration-300
+      shadow-[0_8px_20px_rgba(213,43,30,0.45)]
+      hover:shadow-[0_12px_30px_rgba(213,43,30,0.7)]
+      border border-[#FF6A5C]
+      relative
+    "
   >
     GitHub
   </a>
+</div>
 </div>            </motion.div>
           </div>
 
