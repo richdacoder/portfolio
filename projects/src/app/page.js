@@ -1,5 +1,6 @@
 "use client";
-import Image from 'next/image'
+import Image from 'next/image';
+import { Github } from "lucide-react";
 
 import {
   motion,
@@ -176,23 +177,22 @@ export default function Home() {
   </a>
 
   <a
-    href="https://github.com/richdacoder"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      px-6 py-3 rounded-full font-bold text-white
-      bg-[#D52B1E]
-      hover:scale-105
-      transition-all duration-300
-      shadow-[0_8px_20px_rgba(213,43,30,0.45)]
-      hover:shadow-[0_12px_30px_rgba(213,43,30,0.7)]
-      border border-[#FF6A5C]
-      relative
-    "
-  >
-    GitHub
-  </a>
-</div>
+  href="https://github.com/richdacoder"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    flex items-center gap-3
+    px-6 py-3 rounded-full
+    font-bold text-white
+    bg-[#D52B1E]
+    hover:scale-105 hover:-translate-y-1
+    transition-all duration-300
+    border border-[#FF6A5C]
+    shadow-[0_8px_20px_rgba(213,43,30,0.45)]
+  "
+>
+<Github size={20} />  GitHub
+</a></div>
 </div>            </motion.div>
           </div>
 
