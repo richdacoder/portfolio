@@ -100,16 +100,31 @@ export default function Home() {
             <p className="uppercase tracking-[0.3em] text-sm text-neutral-500 mb-6">
               Full Stack Developer
             </p>
-
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-6xl md:text-8xl font-black tracking-tight leading-none uppercase italic"
-            >
-              Richard Williams
-            </motion.h1>
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2, duration: 0.8 }}
+  className="relative text-6xl md:text-8xl font-black tracking-tight leading-none uppercase italic"
+>
+  {/* Glow behind text */}
+  <span
+    className="absolute inset-0 blur-2xl opacity-50 bg-gradient-to-r from-[#009B3A] via-[#FED100] to-[#009B3A] bg-clip-text text-transparent"
+    aria-hidden="true"
+  >
+    Richard Williams
+  </span>
 
+  {/* Main text */}
+  <span
+    className="relative bg-gradient-to-r from-[#009B3A] via-[#FED100] to-white bg-clip-text text-transparent"
+    style={{
+      textShadow:
+        "4px 4px 0 rgba(0,0,0,0.5), 8px 8px 20px rgba(254,209,0,0.25)",
+    }}
+  >
+    Richard Williams
+  </span>
+</motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
