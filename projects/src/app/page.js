@@ -91,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* ================= ABOUT ================= */}
-      <section className="bg-white text-black py-24">
+      <section className="bg-white text-black py-24" id="about">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <h2 className="text-4xl md:text-5xl font-bold">About</h2>
 
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* ================= PROJECTS ================= */}
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white py-24" id="projects">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-5xl font-bold mb-12">Projects</h2>
 
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* ================= CONTACT ================= */}
-      <section className="bg-white text-black py-24">
+      <section className="bg-white text-black py-24" id="contact">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-5xl font-bold">Contact</h2>
           <p className="mt-6 text-lg text-gray-700">
