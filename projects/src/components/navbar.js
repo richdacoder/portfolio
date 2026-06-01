@@ -15,11 +15,11 @@ export default function Navbar() {
         </h1>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 text-sm text-neutral-300">
-          <a href="/">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+        <div className="hidden md:flex gap-8 text-sm text-neutral-300 ">
+          <a className="hover:text-white" href="/">Home</a>
+          <a className="hover:text-white" href="#about">About</a>
+          <a className="hover:text-white" href="#projects">Projects</a>
+          <a className="hover:text-white" href="#contact">Contact</a>
         </div>
 
         {/* Mobile Burger */}
@@ -33,7 +33,7 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden border-t border-neutral-800 bg-black/95">
-          <div className="flex flex-col p-6 gap-4">
+          <div className="flex flex-col p-6 gap-4 ">
             <a href="/" onClick={() => setMenuOpen(false)}>
               Home
             </a>
