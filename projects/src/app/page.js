@@ -12,7 +12,7 @@ export default function Home() {
   const [hovered, setHovered] = useState(false);
 
   const imageClass =
-    "rounded-2xl shadow-2xl shadow-black/60 border border-neutral-800 transition-transform duration-300 hover:scale-[1.02] hover:shadow-black/80";
+    "rounded-2xl shadow-xl shadow-black/60 border border-neutral-800 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/80";
 
   return (
     <main className="bg-black text-white">
@@ -35,7 +35,7 @@ export default function Home() {
               Building modern, scalable web applications with performance and UX focus.
             </p>
 
-            {/* SOCIALS */}
+            {/* SOCIALS (UNCHANGED) */}
             <div className="mt-8 flex gap-4">
               <a
                 href="https://github.com/richdacoder"
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
+          {/* RIGHT IMAGE (ONLY SHADOW ADDED) */}
           <div
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
@@ -93,34 +93,67 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-10">
 
-            {/* PROJECT 1 */}
+            {/* PROJECT 1 (LINKS RESTORED) */}
             <div>
-              <Image
-                src="/img/bigjumps4tods.png"
-                width={600}
-                height={400}
-                alt="Project 1"
-                className={imageClass}
-              />
-              <h3 className="text-2xl mt-4 font-bold">Big Jumps 4 TODs</h3>
+              <a
+                href="https://big-jumps-4-tods.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                              <h3 className="text-2xl mt-4 font-bold">
+                Big Jumps 4 TODs
+              </h3>
+                <Image
+                  src="/img/bigjumps4tods.png"
+                  width={600}
+                  height={400}
+                  alt="Project 1"
+                  className={imageClass}
+                />
+              </a>
               <p className="text-neutral-400 mt-2">
                 Booking + admin scheduling system for a local business.
               </p>
+
+              <a
+                href="https://github.com/richdacoder/Big-jumps-4-tods"
+                target="_blank"
+                className="text-sm text-neutral-300 hover:text-white"
+              >
+                GitHub →
+              </a>
             </div>
 
-            {/* PROJECT 2 */}
+            {/* PROJECT 2 (LINKS RESTORED) */}
             <div>
-              <Image
-                src="/img/russ-d-wings.jpeg"
-                width={600}
-                height={400}
-                alt="Project 2"
-                className={imageClass}
-              />
-              <h3 className="text-2xl mt-4 font-bold">Russ D Wings</h3>
+              <a
+                href="https://github.com/richdacoder/Russ-D-wings-"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              <h3 className="text-2xl mt-4 font-bold">
+                Russ D Wings
+              </h3>
+
+                <Image
+                  src="/img/russ-d-wings.jpeg"
+                  width={600}
+                  height={400}
+                  alt="Project 2"
+                  className={imageClass}
+                />
+              </a>
               <p className="text-neutral-400 mt-2">
                 Full-stack order + scheduling system with notifications.
               </p>
+
+              <a
+                href="https://github.com/richdacoder/Russ-D-wings-"
+                target="_blank"
+                className="text-sm text-neutral-300 hover:text-white"
+              >
+                GitHub →
+              </a>
             </div>
 
           </div>
