@@ -164,10 +164,12 @@ export default function Home() {
       <section className="bg-white text-black py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-5xl font-bold">Contact</h2>
-
           <p className="mt-6 text-lg text-gray-700">
-            Email: richard.williams5697@yahoo.com
+            Personal: richard.williams5697@yahoo.com
           </p>
+<p className="mt-3 text-lg text-gray-700">
+  Business: Shalimi.tech203@gmail.com
+</p>
         </div>
       </section>
 
