@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import {
   motion,
   useMotionValue,
@@ -143,37 +144,6 @@ export default function Home() {
             >
               <div className="mt-10 flex flex-wrap gap-4">
               <div className="mt-10 flex flex-wrap gap-4">
-  <a
-    href="#projects"
-    className="
-      px-6 py-3 rounded-full font-bold text-black
-      bg-[#FFD100]
-      hover:scale-105
-      transition-all duration-300
-      shadow-[0_8px_20px_rgba(255,209,0,0.45)]
-      hover:shadow-[0_12px_30px_rgba(255,209,0,0.7)]
-      border border-[#FFE45E]
-      relative
-    "
-  >
-    View Projects
-  </a>
-
-  <a
-    href="#contact"
-    className="
-      px-6 py-3 rounded-full font-bold text-white
-      bg-[#0033A0]
-      hover:scale-105
-      transition-all duration-300
-      shadow-[0_8px_20px_rgba(0,51,160,0.45)]
-      hover:shadow-[0_12px_30px_rgba(0,51,160,0.7)]
-      border border-[#4F7DFF]
-      relative
-    "
-  >
-    Contact
-  </a>
 
   <a
   href="https://github.com/richdacoder"
@@ -192,6 +162,29 @@ export default function Home() {
 >
 <FaGithub size={20} />  GitHub
 </a>
+
+<a
+    href="https://www.linkedin.com/in/richard-williams-65a39b33a"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    className="
+      flex items-center justify-center
+      w-12 h-12
+      rounded-xl
+      border border-neutral-700
+      bg-white/[0.03]
+      backdrop-blur-md
+      text-neutral-300
+      hover:text-[#0A66C2]
+      hover:border-[#0A66C2]
+      hover:-translate-y-1
+      transition-all duration-300
+    "
+  >
+    <FaLinkedin size={22} />
+  </a>
+
 </div>
 </div>            </motion.div>
           </div>

@@ -1,38 +1,91 @@
-<nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-xl border-b border-white/10">
-  <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-```
-<a
-  href="#home"
-  className="font-black text-xl tracking-wide"
->
-  Richard Williams
-</a>
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-<div className="hidden md:flex items-center gap-8">
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-  <a href="#home" className="hover:text-yellow-400 transition">
-    Home
-  </a>
+export const metadata = {
+  title: "Richard Williams | Full Stack Developer",
+  description:
+    "Portfolio of Richard Williams built with Next.js, React, and modern full-stack tools.",
+};
 
-  <a href="#about" className="hover:text-yellow-400 transition">
-    About
-  </a>
+// =========================
+// NAVBAR
+// =========================
+function Navbar() {
+  return (
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/60 border-b border-neutral-800">
+      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <h1 className="font-bold tracking-wide text-white">
+          Richard Williams
+        </h1>
 
-  <a href="#skills" className="hover:text-yellow-400 transition">
-    Skills
-  </a>
+        <div className="flex gap-6 text-sm text-neutral-300">
+          <a href="/" className="hover:text-white transition">Home</a>
+          <a href="#about" className="hover:text-white transition">About</a>
+          <a href="#projects" className="hover:text-white transition">Projects</a>
+          <a href="#contact" className="hover:text-white transition">Contact</a>
+        </div>
+      </nav>
+    </header>
+  );
+}
 
-  <a href="#projects" className="hover:text-yellow-400 transition">
-    Projects
-  </a>
+// =========================
+// FOOTER
+// =========================
+function Footer() {
+  return (
+    <footer className="border-t border-neutral-800 mt-20">
+      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-4 text-sm text-neutral-400">
+        <p>© {new Date().getFullYear()} Richard Williams</p>
 
-  <a href="#contact" className="hover:text-yellow-400 transition">
-    Contact
-  </a>
+        <div className="flex gap-6">
+          <a
+            href="https://github.com/richdacoder"
+            target="_blank"
+            className="hover:text-white"
+          >
+            GitHub
+          </a>
 
-</div>
-```
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            className="hover:text-white"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
-  </div>
-</nav>
+// =========================
+// ROOT LAYOUT
+// =========================
+export default function RootLayout({ children }) {
+  return (
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-screen bg-black text-white flex flex-col">
+        <Navbar />
+
+        <main className="flex-1">{children}</main>
+
+        <Footer />
+      </body>
+    </html>
+  );
+}
