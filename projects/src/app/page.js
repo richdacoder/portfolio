@@ -40,16 +40,32 @@ export default function Home() {
               <a
                 href="https://github.com/richdacoder"
                 target="_blank"
-                className="flex items-center gap-2 px-5 py-3 bg-white text-black rounded-full font-semibold"
-              >
+                className="
+                        flex items-center gap-2 px-5 py-3
+                        bg-white text-black rounded-full font-semibold
+                        transition-all duration-300
+                        hover:scale-105
+                        hover:-translate-y-1
+                        hover:shadow-[0_15px_35px_rgba(255,255,255,0.2)]
+                        active:scale-95
+                      "              >
                 <FaGithub /> GitHub
               </a>
 
               <a
                 href="https://www.linkedin.com/in/richard-williams-65a39b33a"
                 target="_blank"
-                className="flex items-center gap-2 px-5 py-3 border border-white rounded-full"
-              >
+                className="
+                          flex items-center gap-2 px-5 py-3
+                          border border-white rounded-full
+                          transition-all duration-300
+                          hover:scale-105
+                          hover:-translate-y-1
+                          hover:bg-[#0A66C2]
+                          hover:border-[#0A66C2]
+                          hover:shadow-[0_15px_35px_rgba(10,102,194,0.35)]
+                          active:scale-95
+                        "              >
                 <FaLinkedin /> LinkedIn
               </a>
             </div>
