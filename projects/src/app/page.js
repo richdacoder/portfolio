@@ -92,16 +92,18 @@ export default function Home() {
 
       {/* ================= ABOUT ================= */}
       <section className="bg-white text-black py-24" id="about">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-          <h2 className="text-4xl md:text-5xl font-bold">About</h2>
+  <div className="max-w-3xl mx-auto px-6 text-center">
+    <h2 className="text-4xl md:text-5xl font-bold mb-8">
+      About
+    </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed">
-            I build scalable web systems for businesses using Next.js, React, and backend APIs.
-            My focus is clean UI, performance, and real-world usability.
-          </p>
-        </div>
-      </section>
-
+    <p className="text-lg text-gray-700 leading-relaxed">
+      I build scalable web systems for businesses using Next.js, React,
+      and backend APIs. My focus is clean UI, performance, and real-world
+      usability.
+    </p>
+  </div>
+</section>
       {/* ================= PROJECTS ================= */}
       <section className="bg-black text-white py-24" id="projects">
         <div className="max-w-6xl mx-auto px-6">
