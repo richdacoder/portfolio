@@ -106,8 +106,8 @@ export default function Home() {
 </section>
       {/* ================= PROJECTS ================= */}
       <section className="bg-black text-white py-24" id="projects">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold mb-12">Projects</h2>
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-5xl font-bold mb-12">Projects</h2>
 
           <div className="grid md:grid-cols-2 gap-10">
 
