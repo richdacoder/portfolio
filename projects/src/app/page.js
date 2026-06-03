@@ -181,11 +181,12 @@ export default function Home() {
       {/* ================= CONTACT ================= */}
       <section className="bg-white text-black py-24" id="contact">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold">Contact</h2>
-          <p className="mt-6 text-lg text-gray-700">
+        <h2 className="text-5xl font-bold text-center">
+                Contact </h2>
+            <p className="mt-6 text-lg text-gray-700 text-center">
             Personal: richard.williams5697@yahoo.com
           </p>
-<p className="mt-3 text-lg text-gray-700">
+<p className="mt-3 text-lg text-gray-700 text-center">
   Business: Shalimi.tech203@gmail.com
 </p>
         </div>
