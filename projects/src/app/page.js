@@ -23,20 +23,20 @@ export default function Home() {
 
           {/* LEFT */}
           <div className="max-w-2xl">
-            <p className="uppercase tracking-[0.3em] text-sm text-neutral-400">
+            <p className="uppercase tracking-[0.3em] text-sm text-neutral-400 text-center">
               Full Stack Developer
             </p>
 
-            <h1 className="text-6xl md:text-8xl font-black mt-4">
+            <h1 className="text-6xl md:text-8xl font-black mt-4 text-center">
               Richard Williams
             </h1>
 
-            <p className="mt-6 text-neutral-300 max-w-xl">
+            <p className="mt-6 text-neutral-300 max-w-xl text-center">
               Building modern, scalable web applications with performance and UX focus.
             </p>
 
             {/* SOCIALS (UNCHANGED) */}
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex gap-4 justify-center">
               <a
                 href="https://github.com/richdacoder"
                 target="_blank"
@@ -48,6 +48,7 @@ export default function Home() {
                         hover:-translate-y-1
                         hover:shadow-[0_15px_35px_rgba(255,255,255,0.2)]
                         active:scale-95
+                        text-center
                       "              >
                 <FaGithub /> GitHub
               </a>
@@ -65,6 +66,7 @@ export default function Home() {
                           hover:border-[#0A66C2]
                           hover:shadow-[0_15px_35px_rgba(10,102,194,0.35)]
                           active:scale-95
+                          text-center
                         "              >
                 <FaLinkedin /> LinkedIn
               </a>
@@ -83,7 +85,7 @@ export default function Home() {
               src="/img/profilepic.JPEG"
               alt="Profile"
               fill
-              className="object-cover shadow-2xl shadow-black/70"
+              className="object-cover shadow-2xl shadow-black/70 text-center"
             />
           </div>
 
