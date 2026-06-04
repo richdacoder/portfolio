@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-zinc-700/50 border-b border-neutral-800">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        <h1 className="font-bold text-white">
+        <h1 className="font-bold text-amber-400">
           Richard Williams
         </h1>
 
