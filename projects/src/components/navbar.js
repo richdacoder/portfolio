@@ -15,7 +15,7 @@ export default function Navbar() {
         </h1>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 text-sm text-neutral-300 ">
+        <div className="hidden md:flex gap-8 text-sm text-amber-400 ">
           <a className="hover:text-white" href="/">Home</a>
           <a className="hover:text-white" href="#about">About</a>
           <a className="hover:text-white" href="#projects">Projects</a>
