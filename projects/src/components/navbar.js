@@ -25,14 +25,14 @@ export default function Navbar() {
         {/* Mobile Burger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-xl"
+          className="md:hidden text-amber-400 text-xl"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </nav>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-neutral-800 bg-black/95">
+        <div className="md:hidden border-t border-neutral-800 text-amber-400 bg-black/95">
           <div className="flex flex-col p-6 gap-4 ">
             <a href="/" onClick={() => setMenuOpen(false)}>
               Home
