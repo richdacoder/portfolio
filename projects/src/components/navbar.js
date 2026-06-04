@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-red-600/70 border-b border-neutral-800">
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-zinc-700/50 border-b border-neutral-800">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
         <h1 className="font-bold text-white">
