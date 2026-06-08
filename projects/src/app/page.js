@@ -19,8 +19,7 @@ export default function Home() {
 
       {/* ================= HERO ================= */}
       <section className="min-h-screen flex items-center">
-        <div className="max-w-6xl mx-auto px-6 w-full flex flex-col lg:flex-row justify-between items-center gap-16">
-
+        <div className="max-w-6xl mx-auto px-6 w-full flex flex-col items-center text-center gap-12">
           {/* LEFT */}
           <div className="max-w-2xl">
             <p className="uppercase tracking-[0.3em] text-sm text-neutral-400 text-center">
