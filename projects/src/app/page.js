@@ -24,8 +24,7 @@ export default function Home() {
           {/* LEFT */}
           <div className="max-w-2xl">
             <p className="uppercase tracking-[0.3em] text-sm text-neutral-400 text-center">
-              Full Stack Developer
-            </p>
+              Founder & Full-Stack Developer at Shalimi Tech            </p>
 
             <h1 className="text-6xl md:text-8xl font-black mt-4 text-center">
               Richard Williams
