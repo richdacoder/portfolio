@@ -33,6 +33,23 @@ export default function Home() {
               Building modern, scalable web applications with performance and UX focus.
             </p>
 
+            <div className="flex justify-center mt-8">
+                      <div
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className={`relative w-72 h-72 md:w-80 md:h-80 overflow-hidden rounded-3xl border border-neutral-700 transition-transform duration-300 ${
+              hovered ? "scale-105 rotate-1" : ""
+            }`}
+          >
+            <Image
+              src="/img/profilepic.JPEG"
+              alt="Profile"
+              fill
+              className="object-cover shadow-2xl shadow-black/70 text-center"
+            />
+          </div>
+          </div>
+
             {/* SOCIALS (UNCHANGED) */}
             <div className="mt-8 flex gap-4 justify-center">
               <a
@@ -72,20 +89,6 @@ export default function Home() {
           </div>
 
           {/* RIGHT IMAGE (ONLY SHADOW ADDED) */}
-          <div
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            className={`relative w-72 h-72 md:w-80 md:h-80 overflow-hidden rounded-3xl border border-neutral-700 transition-transform duration-300 ${
-              hovered ? "scale-105 rotate-1" : ""
-            }`}
-          >
-            <Image
-              src="/img/profilepic.JPEG"
-              alt="Profile"
-              fill
-              className="object-cover shadow-2xl shadow-black/70 text-center"
-            />
-          </div>
 
         </div>
       </section>
