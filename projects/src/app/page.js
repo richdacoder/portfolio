@@ -187,7 +187,7 @@ export default function Home() {
         <h2 className="text-5xl font-bold text-center">
                 Contact </h2>
             <p className="mt-6 text-lg text-gray-700 text-center">
-            Personal: richard.williams5697@yahoo.com
+            Personal: richwill3232@gmail.com
           </p>
 <p className="mt-3 text-lg text-gray-700 text-center">
   Business: Shalimi.tech203@gmail.com
