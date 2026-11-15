@@ -148,7 +148,7 @@ export default function Home() {
             {/* PROJECT 2 (LINKS RESTORED) */}
             <div>
               <a
-                href="https://github.com/richdacoder/Russ-D-wings-"
+                href="https://russ-d-wings.onrender.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
