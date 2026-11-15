@@ -1,200 +1,216 @@
-"use client";
-
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
 
-// =========================
-// HOME
-// =========================
-export default function Home() {
-  const [hovered, setHovered] = useState(false);
+const projects = [
+  {
+    title: "Big Jumps 4 TODs",
+    description: "Booking and admin scheduling system for a local business.",
+    image: "/img/bigjumps4todss.png",
+    alt: "Screenshot of the Big Jumps 4 TODs website",
+    tags: ["Booking", "Admin scheduling"],
+    live: "https://big-jumps-4-tods.onrender.com/",
+    github: "https://github.com/richdacoder/Big-jumps-4-tods",
+  },
+  {
+    title: "Russ D Wings",
+    description: "Full-stack order and scheduling system with notifications.",
+    image: "/img/russ-d-wings.jpeg",
+    alt: "Screenshot of the Russ D Wings website",
+    tags: ["Orders", "Scheduling", "Notifications"],
+    live: "https://russ-d-wings.onrender.com",
+    github: "https://github.com/richdacoder/Russ-D-wings-",
+  },
+];
 
-  const imageClass =
-    "rounded-2xl shadow-xl shadow-black/60 border border-neutral-800 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/80";
+const elsewhere = [
+  {
+    label: "GitHub",
+    value: "github.com/richdacoder",
+    href: "https://github.com/richdacoder",
+    Icon: FaGithub,
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    value: "Richard Williams",
+    href: "https://www.linkedin.com/in/richard-williams-65a39b33a",
+    Icon: FaLinkedin,
+    external: true,
+  },
+  {
+    label: "Business email",
+    value: "Shalimi.tech203@gmail.com",
+    href: "mailto:Shalimi.tech203@gmail.com",
+    Icon: FaEnvelope,
+  },
+  {
+    label: "Personal email",
+    value: "richwill3232@gmail.com",
+    href: "mailto:richwill3232@gmail.com",
+    Icon: FaEnvelope,
+  },
+];
 
+const focusRing =
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sun";
+
+// One row of the page: Roman numeral on the left, content on the right.
+function Section({ id, numeral, title, children }) {
   return (
-    <main className="bg-black text-white">
+    <section
+      id={id}
+      className="scroll-mt-8 grid gap-6 border-t-2 border-cream/20 py-16 md:grid-cols-[7rem_1fr] md:gap-10 md:py-20"
+    >
+      <p aria-hidden="true" className="font-display text-5xl text-sun md:text-6xl">
+        {numeral}
+      </p>
+      <div>
+        <h2 className="font-display text-5xl sm:text-6xl">{title}</h2>
+        <div className="mt-10">{children}</div>
+      </div>
+    </section>
+  );
+}
 
-      {/* ================= HERO ================= */}
-      <section className="min-h-screen flex items-center">
-        <div className="max-w-6xl mx-auto px-6 w-full flex flex-col items-center text-center gap-12">
-          {/* LEFT */}
-          <div className="max-w-2xl">
-            <p className="uppercase tracking-[0.3em] text-sm text-neutral-400 text-center">
-              Founder & Full-Stack Developer at Shalimi Tech            </p>
+export default function Home() {
+  return (
+    <div className="mx-auto w-full max-w-5xl px-6">
+      {/* ================= INTRO ================= */}
+      <header className="py-20 md:py-28">
+        <p className="text-base text-cream/70 md:text-xl">
+          Founder &amp; Full-Stack Developer at Shalimi Tech
+        </p>
+        <h1 className="mt-6 font-display text-5xl leading-[1.05] sm:text-7xl lg:text-8xl">
+          Richard
+          <br />
+          <span className="bg-gradient-to-r from-sun to-coral bg-clip-text text-transparent">
+            Williams
+          </span>
+        </h1>
+        <p className="mt-8 max-w-2xl text-xl leading-relaxed text-cream/70 md:text-2xl">
+          Building modern, scalable web applications with performance and UX
+          focus.
+        </p>
+        <a
+          href="#projects"
+          className={`mt-10 inline-block rounded-full bg-sun px-8 py-4 text-lg text-ink transition hover:bg-cream ${focusRing}`}
+        >
+          See my work
+        </a>
+      </header>
 
-            <h1 className="text-6xl md:text-8xl font-black mt-4 text-center">
-              Richard Williams
-            </h1>
-
-            <p className="mt-6 text-neutral-300 max-w-xl text-center">
-              Building modern, scalable web applications with performance and UX focus.
-            </p>
-
-            <div className="flex justify-center mt-8">
-                      <div
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            className={`relative w-72 h-72 md:w-80 md:h-80 overflow-hidden rounded-3xl border border-neutral-700 transition-transform duration-300 ${
-              hovered ? "scale-105 rotate-1" : ""
-            }`}
-          >
+      {/* ================= I. ABOUT ================= */}
+      <Section id="about" numeral="I" title="About">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-start">
+          <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-full border-2 border-sun bg-surface">
             <Image
               src="/img/profilepic.JPEG"
-              alt="Profile"
+              alt="Portrait of Richard Williams"
               fill
-              className="object-cover shadow-2xl shadow-black/70 text-center"
+              priority
+              sizes="176px"
+              className="object-cover"
             />
           </div>
-          </div>
-
-            {/* SOCIALS (UNCHANGED) */}
-            <div className="mt-8 flex gap-4 justify-center">
-              <a
-                href="https://github.com/richdacoder"
-                target="_blank"
-                className="
-                        flex items-center gap-2 px-5 py-3
-                        bg-white text-black rounded-full font-semibold
-                        transition-all duration-300
-                        hover:scale-105
-                        hover:-translate-y-1
-                        hover:shadow-[0_15px_35px_rgba(255,255,255,0.2)]
-                        active:scale-95
-                        text-center
-                      "              >
-                <FaGithub /> GitHub
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/richard-williams-65a39b33a"
-                target="_blank"
-                className="
-                          flex items-center gap-2 px-5 py-3
-                          border border-white rounded-full
-                          transition-all duration-300
-                          hover:scale-105
-                          hover:-translate-y-1
-                          hover:bg-[#0A66C2]
-                          hover:border-[#0A66C2]
-                          hover:shadow-[0_15px_35px_rgba(10,102,194,0.35)]
-                          active:scale-95
-                          text-center
-                        "              >
-                <FaLinkedin /> LinkedIn
-              </a>
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE (ONLY SHADOW ADDED) */}
-
-        </div>
-      </section>
-
-      {/* ================= ABOUT ================= */}
-      <section className="bg-white text-black py-24" id="about">
-  <div className="max-w-3xl mx-auto px-6 text-center">
-    <h2 className="text-4xl md:text-5xl font-bold mb-8">
-      About
-    </h2>
-
-    <p className="text-lg text-gray-700 leading-relaxed">
-      I build scalable web systems for businesses using Next.js, React,
-      and backend APIs. My focus is clean UI, performance, and real-world
-      usability.
-    </p>
-  </div>
-</section>
-      {/* ================= PROJECTS ================= */}
-      <section className="bg-black text-white py-24" id="projects">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-5xl font-bold mb-12">Projects</h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-
-            {/* PROJECT 1 (LINKS RESTORED) */}
-            <div>
-              <a
-                href="https://big-jumps-4-tods.onrender.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                              <h3 className="text-2xl mt-4 font-bold">
-                Big Jumps 4 TODs
-              </h3>
-                <Image
-                  src="/img/bigjumps4tods.png"
-                  width={600}
-                  height={400}
-                  alt="Project 1"
-                  className={imageClass}
-                />
-              </a>
-              <p className="text-neutral-400 mt-2">
-                Booking + admin scheduling system for a local business.
-              </p>
-
-              <a
-                href="https://github.com/richdacoder/Big-jumps-4-tods"
-                target="_blank"
-                className="text-sm text-neutral-300 hover:text-white"
-              >
-                GitHub →
-              </a>
-            </div>
-
-            {/* PROJECT 2 (LINKS RESTORED) */}
-            <div>
-              <a
-                href="https://russ-d-wings.onrender.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              <h3 className="text-2xl mt-4 font-bold">
-                Russ D Wings
-              </h3>
-
-                <Image
-                  src="/img/russ-d-wings.jpeg"
-                  width={600}
-                  height={400}
-                  alt="Project 2"
-                  className={imageClass}
-                />
-              </a>
-              <p className="text-neutral-400 mt-2">
-                Full-stack order + scheduling system with notifications.
-              </p>
-
-              <a
-                href="https://github.com/richdacoder/Russ-D-wings-"
-                target="_blank"
-                className="text-sm text-neutral-300 hover:text-white"
-              >
-                GitHub →
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ================= CONTACT ================= */}
-      <section className="bg-white text-black py-24" id="contact">
-        <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-5xl font-bold text-center">
-                Contact </h2>
-            <p className="mt-6 text-lg text-gray-700 text-center">
-            Personal: richwill3232@gmail.com
+          <p className="max-w-2xl text-xl leading-relaxed text-cream/80 md:text-2xl">
+            I build scalable web systems for businesses using Next.js, React,
+            and backend APIs. My focus is clean UI, performance, and real-world
+            usability.
           </p>
-<p className="mt-3 text-lg text-gray-700 text-center">
-  Business: Shalimi.tech203@gmail.com
-</p>
         </div>
-      </section>
+      </Section>
 
-    </main>
+      {/* ================= II. PROJECTS ================= */}
+      <Section id="projects" numeral="II" title="Projects">
+        <ul className="divide-y-2 divide-cream/15">
+          {projects.map((project) => (
+            <li
+              key={project.title}
+              className="grid gap-8 py-10 first:pt-0 last:pb-0 lg:grid-cols-[1fr_1.1fr] lg:items-center"
+            >
+              <div>
+                <h3 className="font-display text-3xl sm:text-4xl">
+                  {project.title}
+                </h3>
+                <p className="mt-4 text-lg leading-relaxed text-cream/70 md:text-xl">
+                  {project.description}
+                </p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="rounded-full border border-cream/25 px-4 py-1.5 text-sm text-cream/90"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center gap-2 rounded-full bg-sun px-6 py-3 text-base text-ink transition hover:bg-cream ${focusRing}`}
+                  >
+                    Live site <FaExternalLinkAlt className="text-xs" />
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center gap-2 rounded-full border border-cream/30 px-6 py-3 text-base transition hover:border-cream/60 hover:bg-cream/10 ${focusRing}`}
+                  >
+                    <FaGithub /> Code
+                  </a>
+                </div>
+              </div>
+
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${project.title} live site`}
+                className={`relative block aspect-[3/2] overflow-hidden rounded-2xl border-2 border-cream/20 bg-surface transition hover:border-sun ${focusRing}`}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.alt}
+                  fill
+                  sizes="(min-width: 1024px) 480px, 100vw"
+                  className="object-cover object-top"
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* ================= III. CONTACT ================= */}
+      <Section id="contact" numeral="III" title="Contact">
+        <p className="max-w-2xl text-xl leading-relaxed text-cream/80 md:text-2xl">
+          Reach out about a project, a role, or a business website.
+        </p>
+        <ul className="mt-10 divide-y-2 divide-cream/15 border-y-2 border-cream/15">
+          {elsewhere.map(({ label, value, href, Icon, external }) => (
+            <li key={label}>
+              <a
+                href={href}
+                {...(external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className={`group flex flex-col gap-1 py-5 transition hover:text-sun sm:flex-row sm:items-center sm:justify-between ${focusRing}`}
+              >
+                <span className="flex items-center gap-3 text-xl md:text-2xl">
+                  <Icon aria-hidden="true" /> {label}
+                </span>
+                <span className="break-all text-base text-cream/70 transition group-hover:text-sun md:text-lg">
+                  {value}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Section>
+    </div>
   );
 }
