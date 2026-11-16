@@ -93,7 +93,7 @@ export default function Home() {
         </p>
         <a
           href="#projects"
-          className={`mt-10 inline-block rounded-full bg-sun px-8 py-4 text-lg text-ink transition hover:bg-cream ${focusRing}`}
+          className={`mt-10 inline-block rounded-full bg-sun px-8 py-4 text-lg text-ink transition hover:text-black/40 ${focusRing}`}
         >
           See my work
         </a>

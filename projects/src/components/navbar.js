@@ -36,7 +36,7 @@ export default function Navbar() {
             <li key={label}>
               <a
                 href={href}
-                className={`block rounded-md px-4 py-2 transition duration-200 hover:bg-moss hover:text-black/49 hover:text-sun motion-safe:hover:-translate-y-0.5 ${focusRing}`}
+                className={`block rounded-md px-4 py-2 transition duration-200 hover:bg-moss hover:text-black/40 hover:text-sun motion-safe:hover:-translate-y-0.5 ${focusRing}`}
               >
                 {label}
               </a>
