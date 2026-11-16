@@ -22,21 +22,21 @@ export default function Navbar() {
         aria-label="Main"
         className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
       >
-        {/* Logo (a link, not a heading: the page already has its own h1) */}
+        {/* Logo */}
         <a
           href="/"
-          className={`font-display text-xl text-sun transition hover:text-cream md:text-2xl ${focusRing}`}
+          className={`font-display text-xl text-sun transition duration-200 hover:text-cream motion-safe:hover:scale-105 md:text-2xl ${focusRing}`}
         >
           Richard Williams
         </a>
 
         {/* Desktop menu */}
-        <ul className="hidden gap-10 text-lg text-cream/80 md:flex">
+        <ul className="hidden gap-4 text-lg text-cream/80 md:flex">
           {links.map(({ label, href }) => (
             <li key={label}>
               <a
                 href={href}
-                className={`transition hover:text-sun ${focusRing}`}
+                className={`block rounded-md px-4 py-2 transition duration-200 hover:bg-moss hover:text-black/49 hover:text-sun motion-safe:hover:-translate-y-0.5 ${focusRing}`}
               >
                 {label}
               </a>
@@ -51,7 +51,7 @@ export default function Navbar() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          className={`text-2xl text-sun md:hidden ${focusRing}`}
+          className={`rounded-md p-2 text-2xl text-sun transition duration-200 hover:bg-moss hover:text-cream md:hidden ${focusRing}`}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 <a
                   href={href}
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 text-cream/90 transition hover:text-sun ${focusRing}`}
+                  className={`block rounded-md px-3 py-2 text-cream/90 transition duration-200 hover:bg-moss hover:text-sun ${focusRing}`}
                 >
                   {label}
                 </a>
