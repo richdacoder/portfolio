@@ -31,7 +31,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className={`block text-cream/80 transition ${hover} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun`}
+                className={`block text-cream/80 transition duration-200 motion-safe:hover:-translate-y-1 motion-safe:hover:scale-110 ${hover} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun`}
               >
                 <Icon size={28} aria-hidden="true" />
               </a>
