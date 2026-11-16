@@ -150,7 +150,7 @@ export default function Home() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-2 rounded-full bg-sun px-6 hover:text-white py-3 text-base text-ink transition hover:text-cream ${focusRing}`}
+                    className={`flex items-center gap-2 rounded-full bg-sun px-6 hover:text-black/30 py-3 text-base text-ink transition hover:text-cream ${focusRing}`}
                   >
                     Live site <FaExternalLinkAlt className="text-xs " />
                   </a>
@@ -158,7 +158,7 @@ export default function Home() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-2 hover:text-white rounded-full border border-cream/30 px-6 py-3 text-base transition hover:border-cream/60 hover:bg-cream/10 ${focusRing}`}
+                    className={`flex items-center gap-2 hover:text-black/30 rounded-full border border-cream/30 px-6 py-3 text-base transition hover:border-cream/60 hover:bg-cream/10 ${focusRing}`}
                   >
                     <FaGithub /> Code
                   </a>
