@@ -198,10 +198,10 @@ export default function Home() {
                 {...(external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className={`group flex flex-col gap-1 py-5 transition hover:text-sun sm:flex-row sm:items-center sm:justify-between ${focusRing}`}
+                className={`group flex flex-col gap-1 py-5  sm:flex-row sm:items-center sm:justify-between ${focusRing}`}
               >
-                <span className="flex items-center gap-3 text-xl md:text-2xl">
-                  <Icon aria-hidden="true" /> {label}
+                <span className="flex items-center gap-3 text-xl transition duration-200 motion-safe:hover:-translate-y-1 md:text-2xl">
+                  <Icon aria-hidden="true" className="transition duration-200 motion-safe:hover:-translate-y-1" /> {label}
                 </span>
                 <span className="break-all text-base text-cream/70 transition group-hover:text-sun md:text-lg">
                   {value}
